@@ -1,13 +1,13 @@
 import { View, Text, ScrollView, Image, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { images } from '../../constants'
-import { FormField } from '../../components/formfield'
-import { CustomButton } from '../../components/custombutton'
+import { images } from '@/constants'
+import { FormField } from '@/components/formfield'
+import { CustomButton } from '@/components/custombutton'
 import { Link } from 'expo-router'
-import { createUser } from '../../lib/appwrite'
+import { createUser } from '@/lib/appwrite'
 import { useRouter } from 'expo-router'
-import { useGlobalContext } from "../../context/GlobalProvider";
+import { useGlobalContext } from "@/context/GlobalProvider";
 
 
 const SignUp = () => {
