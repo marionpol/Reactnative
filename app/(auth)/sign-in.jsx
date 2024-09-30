@@ -32,12 +32,12 @@ const Submit = async () => {
     setUser(result);
     setIsLoggedIn(true);
 
-    Alert.alert("Success!", "User signed in Sucessfully");
-    router.replace('/home')
+      Alert.alert("Success!", "User signed in Sucessfully");
+      router.replace('/home')
   } catch (error) {
-    Alert.alert('Error', error.message)
+      Alert.alert('Error', error.message)
   } finally{
-    setSubmitting(false)
+      setSubmitting(false)
   }
 }
 

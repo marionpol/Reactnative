@@ -40,27 +40,27 @@ const logout = async () => {
                 className="w-6 h-6"/>
               </TouchableOpacity>
               <View className="w-16 h-16 border border-secondary rounded-lg justify-center items-center">
-              <Image source={{uri: user?.avatar}}
-              className="w-[90%] h-[90%] rounded-lg "
-              resizeMode='cover'/>
+                <Image source={{uri: user?.avatar}}
+                className="w-[90%] h-[90%] rounded-lg "
+                resizeMode='cover'/>
               </View>
-              <InfoBox
-                title={user?.username}
-                containerStyles='mt-5'
-                titleStyles="text-lg"
+                <InfoBox
+                  title={user?.username}
+                  containerStyles='mt-5'
+                  titleStyles="text-lg"
               />
               <View className="mt-5 flex-row">
-              <InfoBox
-                title={posts.length || 0}
-                subtitle="Posts"
-                containerStyles='mr-10'
-                titleStyles="text-xl"
-              />
-              <InfoBox
-                title="1.2k"
-                subtitle="Followers"
-                titleStyles="text-xl"
-              />
+                <InfoBox
+                  title={posts.length || 0}
+                  subtitle="Posts"
+                  containerStyles='mr-10'
+                  titleStyles="text-xl"
+                />
+                <InfoBox
+                  title="1.2k"
+                  subtitle="Followers"
+                  titleStyles="text-xl"
+                />
               </View>
             </View>
           

@@ -37,9 +37,9 @@ const Submit = async () => {
    
     router.replace('/home')
   } catch (error) {
-    Alert.alert('Error', error.message)
+      Alert.alert('Error', error.message)
   } finally{
-    setSubmitting(false)
+      setSubmitting(false)
   }
 }
 

@@ -36,13 +36,15 @@ const VideoCard = ({video: { title, thumbnail, video, users: { username,  avatar
             useNativeControls
             shouldPlay
             onPlaybackStatusUpdate={(status) => {
-             if(status.didJustFinish) {
-               setPlay(false);
-             } else if (status.error) {
-                 console.error("Error playing video:", status.error);
-               }
-             }
-            }/> 
+                if(status.didJustFinish) {
+                setPlay(false);
+                } else if (status.error) {
+                    console.error("Error playing video:", status.error);
+                }
+                }
+                }
+            /> 
+            
         
         ) : (
             <TouchableOpacity

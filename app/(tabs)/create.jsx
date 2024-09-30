@@ -53,16 +53,16 @@ const Create = () => {
         ...form, userId: user.$id
       })
 
-      Alert.alert('Sucess', 'Post uploaded successfully') 
-      router.push('/home')
+        Alert.alert('Sucess', 'Post uploaded successfully') 
+        router.push('/home')
     } catch (error) {
-      Alert.alert('Error', error.message)
+        Alert.alert('Error', error.message)
     } finally{
-      setForm({
-      title: '',
-      video: null,
-      thumbnail: null,
-      prompt: ''
+        setForm({
+        title: '',
+        video: null,
+        thumbnail: null,
+        prompt: ''
       })
       setUploading(false);
     }
@@ -106,11 +106,11 @@ const Create = () => {
               <Text className="text-base text-gray-100 font-pmedium">
               Thumbnail Image
               </Text>
-              <TouchableOpacity onPress={() => openPicker('image')}>
-            {form.thumbnail ? (
-              <Image  source={{uri: form.thumbnail.uri}} resizeMode='cover'
-              className="w-full h-64 rounded-2xl"/>
-            ) : (
+                <TouchableOpacity onPress={() => openPicker('image')}>
+                  {form.thumbnail ? (
+                    <Image  source={{uri: form.thumbnail.uri}} resizeMode='cover'
+                    className="w-full h-64 rounded-2xl"/>
+                  ) : (
               <View className="w-full h-16 px-4 bg-black-100 rounded-xl justify-center items-center border-2 border-black-200 flex-row space-x-2">
                 <Image source={icons.upload}
                 resizeMode='contain'
@@ -118,23 +118,23 @@ const Create = () => {
                 <Text className="text-sm text-gray-100 font-pmedium">
                   Choose a file
                 </Text>
-                </View>
+              </View>
             )}
-          </TouchableOpacity>
-            </View>
+              </TouchableOpacity>
+           </View>
             <FormField
-        title="AI prompt"
-        value={form.prompt}
-        placeholder="The prompt you used to create this video"
-        handleChangeText={(e) => setForm({...form, prompt: e})}
-        otherStyles="mt-7"
-        />
-        <CustomButton
-        title="Submit & Publish"
-        handlePress={Submit}
-        containerStyles="mt-7"
-        isLoading={uploading}
-        />
+              title="AI prompt"
+              value={form.prompt}
+              placeholder="The prompt you used to create this video"
+              handleChangeText={(e) => setForm({...form, prompt: e})}
+              otherStyles="mt-7"
+              />
+            <CustomButton
+              title="Submit & Publish"
+              handlePress={Submit}
+              containerStyles="mt-7"
+              isLoading={uploading}
+              />
       </ScrollView>
     </SafeAreaView>
   )
